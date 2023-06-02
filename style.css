@@ -175,7 +175,7 @@ form {
   padding: 20px;
   margin-bottom: 50px;
 }
-input[type="text"],
+input[type='text'],
 select {
   width: 100%;
   padding: 12px 20px;
@@ -184,7 +184,7 @@ select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type="submit"] {
+input[type='submit'] {
   width: 100%;
   background-color: #2e1503;
   color: white;
@@ -196,7 +196,7 @@ input[type="submit"] {
   cursor: pointer;
   font-family: serif;
 }
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background-color: white;
   color: #2e1503;
   opacity: 0.6;
