@@ -8,46 +8,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KONTAKT | Ketly Iouriev</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
   </head>
   <body>
-    <div class="navigation">
+    <div class="navbar">
       <ul>
-        <li><a href="index.html">AVALEHT</a></li>
-        <li><a href="contact.html">KONTAKT</a></li>
-        <li><a href="about.html">MINUST</a></li>
+        <li><a href="./index.html">AVALEHT</a></li>
+        <li><a href="./contact.html">KONTAKT</a></li>
+        <li><a href="./about.html">MINUST</a></li>
       </ul>
     </div>
-    <div class="contact-content">
-      <div class="contact-intro">
-        <h1><i>KONTAKT</i></h1>
-        <!--<h3>Täida alljärgnev küsimustik, et minuga kontakteeruda!</h3>-->
-      </div>
-      <form action="https://app.headlessforms.cloud/api/v1/form-submission/dBkK49lqz1" method="post">
+    <div class="content">
+      <h1><i>KONTAKT</i></h1>
+      <form
+        action="https://app.headlessforms.cloud/api/v1/form-submission/dBkK49lqz1"
+        method="post"
+      >
         <label for="fname">Eesnimi:</label>
-        <input type="text" id="fname" name="firstname" /><br />
+        <input type="text" id="fname" name="firstname" required />
         <label for="email">Meiliaadress:</label>
-        <input type="text" id="email" name="email" /><br />
-
+        <input type="email" id="email" name="email" required />
         <p>Palun valige kontakteerumise põhjus:</p>
-        <input type="radio" id="freelance-gig" name="fav_language" value="freelance-gig" />
-        <label for="html">Freelance Gig</label><br />
-        <input type="radio" id="swimming-invite" name="fav_language" value="swimming-invite" />
-        <label for="css">Invite to Swimming</label><br />
-        <input type="radio" id="website-bug" name="fav_language" value="website-bug" />
-        <label for="javascript">Report a Website Bug</label><br /><br />
-
+        <div class="radio-buttons">
+          <div>
+            <input
+              type="radio"
+              id="freelance-gig"
+              name="contact-reason"
+              value="freelance-gig"
+              required
+            />
+            <label for="freelance-gig">Freelance Gig</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="swimming-invite"
+              name="contact-reason"
+              value="swimming-invite"
+              required
+            />
+            <label for="swimming-invite">Invite to Swimming</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="website-bug"
+              name="contact-reason"
+              value="website-bug"
+              required
+            />
+            <label for="website-bug">Report a Website Bug</label>
+          </div>
+        </div>
         <label for="country">Vali riik:</label><br />
         <select id="country" name="country">
           <option value="eesti-1">Eesti</option>
           <option value="eesti-2">Eesti</option>
-          <option value="eesti-3">Eesti</option></select
-        ><br /><br />
-
-        <input type="checkbox" id="gdpr" name="gdpr" value="gdpr" />
-        <label for="vehicle1">Nõustun isikuandmete töötlemise ja muude kasutajatingimustega!</label><br /><br />
-
-        <a href="thankyou.html"><input type="submit" value="SAADA" /></a>
+          <option value="eesti-3">Eesti</option>
+        </select>
+        <input type="checkbox" id="gdpr" name="gdpr" value="gdpr" required />
+        <label for="gdpr"
+          >Nõustun isikuandmete töötlemise ja muude kasutajatingimustega!</label
+        >
+        <a><input type="submit" value="SAADA" /></a>
       </form>
     </div>
   </body>
