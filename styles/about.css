@@ -34,10 +34,6 @@ table tbody tr {
 table tbody tr:nth-of-type(even) {
   background-color: #efe8db;
 }
-.accordion input {
-  position: absolute;
-  opacity: 0;
-}
 .accordion {
   margin: 10px;
   overflow: hidden;
@@ -63,7 +59,11 @@ table tbody tr:nth-of-type(even) {
 .accordion-content a {
   color: blue;
 }
-input:checked ~ .accordion-content {
+.accordion-label + .accordion-content {
+  display: none;
+}
+.accordion-label.is-open + .accordion-content {
+  display: block;
   max-height: 100vh;
   padding: 1em;
 }
