@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KONTAKT | Ketly Iouriev</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
-    <link rel="stylesheet" href="./styles/reset.css" />
   </head>
   <body>
     <div class="navbar">
@@ -21,8 +21,8 @@
       </ul>
     </div>
     <div class="content">
-      <h1><i>KONTAKT</i></h1>
-      <form action="./thankyou.html">
+      <h1>KONTAKT</h1>
+      <form id="form" action="#">
         <label for="fname">Eesnimi:</label>
         <input type="text" id="fname" name="firstname" required />
         <label for="email">Meiliaadress:</label>
@@ -60,8 +60,9 @@
             <label for="website-bug">Report a Website Bug</label>
           </div>
         </div>
-        <label for="country">Vali riik:</label>
-        <select id="country" name="country">
+        <label for="country">Vali riik (statistika eesmärgil):</label>
+        <select id="country" name="country" required>
+          <option disabled selected value></option>
           <option value="eesti-1">Eesti</option>
           <option value="eesti-2">Eesti</option>
           <option value="eesti-3">Eesti</option>
@@ -73,6 +74,6 @@
         <a><input type="submit" value="SAADA" /></a>
       </form>
     </div>
-    <script type="text/javascript" src="./scripts/contact_script.js"></script>
+    <script type="text/javascript" src="./scripts/script-contact.js"></script>
   </body>
 </html>
