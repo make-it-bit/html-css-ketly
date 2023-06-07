@@ -1,7 +1,28 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+}
+
 .navbar {
   position: sticky;
   top: 0;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -9,14 +30,17 @@ ul {
   overflow: hidden;
   background-color: #2e1503;
 }
+
 li {
   float: left;
   border-right: 1px solid #bbb;
 }
+
 li:last-child {
   border-right: none;
   float: right;
 }
+
 li a {
   display: inline-block;
   color: white;
@@ -24,9 +48,12 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
+
 li a:hover:not(.active) {
   background-color: #d4cec3;
+  color: #2e1503;
 }
+
 .content {
   background-color: #d4cec3;
   color: #2e1503;
@@ -35,18 +62,32 @@ li a:hover:not(.active) {
   flex-direction: column;
   align-items: center;
 }
-button {
-  width: 150px;
-  height: 40px;
+
+button,
+input[type="submit"] {
   background-color: #2e1503;
   color: white;
   border: none;
-  font-family: serif;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
 }
-button:hover {
-  background-color: white;
+
+button {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 24px 0 8px 0;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #d4cec3;
   color: #2e1503;
-  opacity: 0.6;
-  transition: 0.3s;
+  transition: 0.4s;
   cursor: pointer;
 }
