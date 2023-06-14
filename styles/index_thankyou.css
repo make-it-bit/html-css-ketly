@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #2e1503;
+  border-bottom: 1px solid var(--dark-brown);
   width: 75%;
   text-align: center;
 }

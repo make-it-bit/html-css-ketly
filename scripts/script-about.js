@@ -1,17 +1,17 @@
-const accordion_elements = document.getElementsByClassName('accordion-label');
+const accordionElements = document.getElementsByClassName('accordion-label');
 
-for (let i = 0; i < accordion_elements.length; i++) {
-  accordion_elements[i].addEventListener('click', () => {
-    // if none are open
-    if (accordion_elements[i].classList.contains('is-open')) {
-      accordion_elements[i].classList.remove('is-open');
+for (let i = 0; i < accordionElements.length; i++) {
+  accordionElements[i].addEventListener('click', () => {
+    // if clicked element is already open, it will be closed!
+    if (accordionElements[i].classList.contains('is-open')) {
+      accordionElements[i].classList.remove('is-open');
       return;
     }
-    // if one is open
-    const accordion_elements_open = document.querySelectorAll('.is-open');
-    for (let j = 0; j < accordion_elements_open.length; j++) {
-      accordion_elements_open[j].classList.remove('is-open');
+    // if clicked element is closed, it will be opened and all the others closed!
+    const accordionElementsOpen = document.querySelectorAll('.is-open');
+    for (let j = 0; j < accordionElementsOpen.length; j++) {
+      accordionElementsOpen[j].classList.remove('is-open');
     }
-    accordion_elements[i].classList.add('is-open');
+    accordionElements[i].classList.add('is-open');
   });
 }
