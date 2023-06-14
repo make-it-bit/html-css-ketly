@@ -21,12 +21,8 @@
       </ul>
     </div>
     <div class="content">
-      <h1><i>KONTAKT</i></h1>
-      <form
-        id="form"
-        action="https://app.headlessforms.cloud/api/v1/form-submission/dBkK49lqz1"
-        method="POST"
-      >
+      <h1>KONTAKT</h1>
+      <form id="form" action="https://app.headlessforms.cloud/api/v1/form-submission/dBkK49lqz1" method="POST">
         <label for="fname">Eesnimi:</label>
         <input type="text" id="fname" name="firstname" required />
         <label for="email">Meiliaadress:</label>
@@ -34,47 +30,29 @@
         <p>Palun valige kontakteerumise põhjus:</p>
         <div class="radio-buttons">
           <div>
-            <input
-              type="radio"
-              id="freelance-gig"
-              name="contact-reason"
-              value="freelance-gig"
-              required
-            />
+            <input type="radio" id="freelance-gig" name="contact-reason" value="freelance-gig" required />
             <label for="freelance-gig">Freelance Gig</label>
           </div>
           <div>
-            <input
-              type="radio"
-              id="swimming-invite"
-              name="contact-reason"
-              value="swimming-invite"
-              required
-            />
+            <input type="radio" id="swimming-invite" name="contact-reason" value="swimming-invite" required />
             <label for="swimming-invite">Invite to Swimming</label>
           </div>
           <div>
-            <input
-              type="radio"
-              id="website-bug"
-              name="contact-reason"
-              value="website-bug"
-              required
-            />
+            <input type="radio" id="website-bug" name="contact-reason" value="website-bug" required />
             <label for="website-bug">Report a Website Bug</label>
           </div>
         </div>
         <label for="country">Vali riik (statistika eesmärgil):</label>
-        <select id="country" name="country" required>
-          <option disabled selected value></option>
-          <option value="eesti-1">Eesti</option>
-          <option value="eesti-2">Eesti</option>
-          <option value="eesti-3">Eesti</option>
-        </select>
+        <div class="select">
+          <select id="country" name="country" required>
+            <option disabled selected value>...</option>
+            <option value="eesti-1">Eesti 1</option>
+            <option value="eesti-2">Eesti 2</option>
+            <option value="eesti-3">Eesti 3</option>
+          </select>
+        </div>
         <input type="checkbox" id="gdpr" name="gdpr" value="gdpr" required />
-        <label for="gdpr"
-          >Nõustun isikuandmete töötlemise ja muude kasutajatingimustega!</label
-        >
+        <label for="gdpr">Nõustun isikuandmete töötlemise ja muude kasutajatingimustega!</label>
         <a><input type="submit" value="SAADA" /></a>
       </form>
     </div>

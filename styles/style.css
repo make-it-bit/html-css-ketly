@@ -1,13 +1,24 @@
+:root {
+  --black: #000000;
+  --dark-grey: #3333336d;
+  --dark-brown: #2e1503;
+  --blue: #0000ff;
+  --light-grey: #bbbbbb;
+  --darker-beige: #d4cec3;
+  --lighter-beige: #efe8db;
+  --white: #ffffff;
+}
+
 @font-face {
   font-family: 'Playfair Display';
-  src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: url('../public/fonts/playfair_display_regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Playfair Display';
-  src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf') format('truetype');
+  src: url('../public/fonts/playfair_display_italic.ttf') format('truetype');
   font-style: italic;
   font-weight: 400;
 }
@@ -26,12 +37,12 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #2e1503;
+  background-color: var(--dark-brown);
 }
 
 li {
   float: left;
-  border-right: 1px solid #bbb;
+  border-right: 1px solid var(--light-grey);
 }
 
 li:last-child {
@@ -41,20 +52,20 @@ li:last-child {
 
 li a {
   display: inline-block;
-  color: white;
+  color: var(--white);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #d4cec3;
-  color: #2e1503;
+  background-color: var(--darker-beige);
+  color: var(--dark-brown);
 }
 
 .content {
-  background-color: #d4cec3;
-  color: #2e1503;
+  background-color: var(--darker-beige);
+  color: var(--dark-brown);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -63,10 +74,10 @@ li a:hover:not(.active) {
 
 button,
 input[type='submit'] {
-  background-color: #2e1503;
-  color: white;
+  background-color: var(--dark-brown);
+  color: var(--white);
   border: none;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
   font-style: normal;
 }
 
@@ -84,8 +95,8 @@ input[type='submit'] {
 
 button:hover,
 input[type='submit']:hover {
-  background-color: #d4cec3;
-  color: #2e1503;
+  background-color: var(--darker-beige);
+  color: var(--dark-brown);
   transition: 0.4s;
   cursor: pointer;
 }
