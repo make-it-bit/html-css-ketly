@@ -11,12 +11,12 @@ form.addEventListener('submit', async (event) => {
         method: 'POST',
         body: new FormData(document.getElementById('form')),
       });
-      window.location.href = 'thankyou.html';
+      window.location.href = './thankyou.html';
     } catch (error) {
       if (error instanceof TypeError) {
         if (error.message === 'Failed to fetch') {
           alert('Vormi postitus-veebiaadress on vigane, mistõttu vormi edastamine ebaõnnestus! Proovi uuesti!');
-          window.location.href = 'contact.html';
+          window.location.href = './contact.html';
         }
       }
     }
