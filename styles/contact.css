@@ -111,8 +111,16 @@ select {
   color: var(--darker-beige);
 }
 
+option {
+  color: var(--black);
+}
+
 option:first-child {
   display: none;
+}
+
+select:required:invalid {
+  color: var(--light-grey);
 }
 
 .alert-message {

@@ -4,33 +4,27 @@ form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const formData = new FormData(form);
-
   if (formValidation(formData)) {
     try {
       await fetch('https://app.headlessforms.cloud/api/v1/form-submission/dBkedgywelqz1', {
         method: 'POST',
-        body: new FormData(document.getElementById('form')),
+        body: formData,
       });
       window.location.href = './thankyou.html';
     } catch (error) {
-      if (error instanceof TypeError) {
-        if (error.message === 'Failed to fetch') {
-          alert('Vormi postitus-veebiaadress on vigane, mistõttu vormi edastamine ebaõnnestus! Proovi uuesti!');
-          window.location.href = './contact.html';
-        }
+      if (error.message === 'Failed to fetch') {
+        alert('Vormi edastamine ebaõnnestus! Proovi uuesti!');
+        window.location.href = './contact.html';
       }
     }
   }
 });
 
 const formValidation = (formData) => {
+  document.querySelector('.alert-message')?.remove();
+
   const firstName = formData.get('first-name');
   const email = formData.get('email');
-
-  const alertMessage = document.querySelector('.alert-message');
-  if (alertMessage) {
-    alertMessage.remove();
-  }
 
   if (!firstName) {
     const firstNameLabel = document.getElementById('fname');

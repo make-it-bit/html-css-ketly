@@ -1,4 +1,4 @@
-const accordionElements = document.getElementsByClassName('accordion-label');
+const accordionElements = document.querySelectorAll('.accordion-label');
 
 for (let i = 0; i < accordionElements.length; i++) {
   accordionElements[i].addEventListener('click', () => {
@@ -7,11 +7,12 @@ for (let i = 0; i < accordionElements.length; i++) {
       accordionElements[i].classList.remove('is-open');
       return;
     }
-    // if clicked element is closed, it will be opened and all the others closed!
+    // if clicked element is closed, it will be opened and all the others will be closed!
     const accordionElementsOpen = document.querySelectorAll('.is-open');
     for (let j = 0; j < accordionElementsOpen.length; j++) {
       accordionElementsOpen[j].classList.remove('is-open');
     }
     accordionElements[i].classList.add('is-open');
+    return;
   });
 }
