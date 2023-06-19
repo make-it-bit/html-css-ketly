@@ -13,7 +13,7 @@ form.addEventListener('submit', async (event) => {
       window.location.href = './thankyou.html';
     } catch (error) {
       if (error.message === 'Failed to fetch') {
-        alert('Vormi edastamine ebaõnnestus! Proovi uuesti!');
+        alert('Vormi edastamine ebaõnnestus, sest siht-veebiaadress on vigane! Proovi uuesti!');
         window.location.href = './contact.html';
       }
     }
