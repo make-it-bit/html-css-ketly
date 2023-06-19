@@ -6,7 +6,7 @@ form.addEventListener('submit', async (event) => {
   const formData = new FormData(form);
   if (formValidation(formData)) {
     try {
-      await fetch('https://app.headlessforms.cloud/api/v1/form-submission/dBkedgywelqz1', {
+      await fetch('https://app.headlessforms.cloud/api/v1/form-submission/dBkK49lqz1', {
         method: 'POST',
         body: formData,
       });

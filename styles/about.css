@@ -63,7 +63,6 @@ table tbody tr:nth-of-type(even) {
   max-height: 0;
   padding: 0 1em;
   background: var(--white);
-  transition: all 0.35s;
   font-size: 1rem;
   font-size: 13px;
   text-align: justify;
