@@ -6,16 +6,16 @@ form.addEventListener('submit', async (event) => {
   const formData = new FormData(form);
   if (formValidation(formData)) {
     try {
-      await fetch('https://app.headlessforms.cloud/api/v1/form-submission/dBkK49lqz1', {
+      await fetch('https://app.headlessforms.cloud/api/v1/form-submission/dBkK49lqz', {
         method: 'POST',
         body: formData,
       });
       window.location.href = './thankyou.html';
+      return;
     } catch (error) {
       if (error.message === 'Failed to fetch') {
         alert('Vormi edastamine ebaõnnestus, sest siht-veebiaadress on vigane! Proovi uuesti!');
-      }
-      else {
+      } else {
         alert('Tekkis tundmatu viga! Proovi mõne aja pärast uuesti!');
       }
       window.location.href = './contact.html';
