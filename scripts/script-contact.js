@@ -14,8 +14,12 @@ form.addEventListener('submit', async (event) => {
     } catch (error) {
       if (error.message === 'Failed to fetch') {
         alert('Vormi edastamine ebaõnnestus, sest siht-veebiaadress on vigane! Proovi uuesti!');
-        window.location.href = './contact.html';
       }
+      else {
+        alert('Tekkis tundmatu viga! Proovi mõne aja pärast uuesti!');
+      }
+      window.location.href = './contact.html';
+      return;
     }
   }
 });
